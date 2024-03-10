@@ -17,5 +17,3 @@
   - 정 오답에 대한 비율을 차트로 표시
 - 오답 노트
   - 틀린 문항에 대해서 따로 리뷰할 수 있다.
-
-'request failed with status code 429'
