@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.24.0",
     "@types/lodash": "^4.14.202"
   }
 }
