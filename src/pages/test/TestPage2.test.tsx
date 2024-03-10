@@ -6,7 +6,7 @@ import IndexPage from "../IndexPage";
 import userEvent from "@testing-library/user-event";
 import useStore from "../../stores/store";
 
-describe("사용자가 문제 풀이를 진행", () => {
+describe("2.사용자가 문제 풀이를 진행", () => {
   let renderUtils: ReturnType<typeof render>;
 
   beforeEach(async () => {
@@ -19,22 +19,26 @@ describe("사용자가 문제 풀이를 진행", () => {
       </MemoryRouter>
     );
   });
-  test("답안을 선택 후 다음 문항 버튼이 활성화 되는지 ", async () => {
-    const { getByRole, findAllByRole } = renderUtils;
+  test("답안을 선택 후 맞았는지 틀렸는지 바로 알 수 있는지", async () => {
+    const { getByRole, findAllByRole, getByText } = renderUtils;
+
     const startBtnEl = getByRole("button");
     const user = userEvent.setup();
     await act(async () => {
       await user.click(startBtnEl);
     });
-    const { currentTime, quizList } = useStore.getState();
     const quizOptionsEl = await findAllByRole("radio", {}, { timeout: 3000 });
     await act(async () => {
       await user.click(quizOptionsEl[0]);
     });
-    const nextBtnEl = getByRole("button");
-    expect(nextBtnEl).toBeEnabled();
+    const correctStateEl = getByText(/정답입니다/i);
+    expect(correctStateEl).toBeInTheDocument();
+    await act(async () => {
+      await user.click(quizOptionsEl[1]);
+    });
+    const incorrectStateEl = getByText(/오답입니다/i);
+    expect(incorrectStateEl).toBeInTheDocument();
   });
-  test("답안을 선택 후 맞았는지 틀렸는지 바로 알 수 있는지", () => {});
   test("답안을 선택 후 다음 문항으로 이동할 수 있는지", () => {});
 });
-// npm test -- --testPathPattern=TestPage.test.tsx
+// npm test -- --testPathPattern=TestPage2.test.tsx
