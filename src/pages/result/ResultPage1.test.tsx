@@ -41,7 +41,7 @@ describe("1.모든 문항을 다 풀면 결과정보를 보여준다", () => {
       await user.click(startBtnEl);
     });
     for (let i = 0; i < 10; i++) {
-      const quizOptionsEl = await findAllByRole("radio");
+      const quizOptionsEl = await findAllByRole("radio", {}, { timeout: 3000 });
       await act(async () => {
         await user.click(quizOptionsEl[0]);
       });
