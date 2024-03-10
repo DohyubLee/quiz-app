@@ -5,6 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import IndexPage from "./pages/IndexPage";
+import TestPage from "./pages/test/TestPage";
+import ErrorPage from "./pages/ErrorPage";
+import ResultPage from "./pages/result/ResultPage";
+import IncorrectAnswerNotePage from "./pages/Incorrect-answer-note/IncorrectAnswerNotePage";
 
 const router = createBrowserRouter([
   {
@@ -12,10 +16,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <IndexPage /> },
-      // { path: "/test/:testId", element: <TestPage /> },
-      // { path: "/result", element: <ResultPage /> },
-      // { path: "/Incorrect-answer-note", element: <IncorrectAnswerNotePage /> },
+      { path: "/test/:testId", element: <TestPage /> },
+      { path: "/result", element: <ResultPage /> },
+      { path: "/Incorrect-answer-note", element: <IncorrectAnswerNotePage /> },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
 
