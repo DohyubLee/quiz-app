@@ -26,8 +26,7 @@ test("renders learn react link", () => {
   //   screen.debug(indexPageEl);
 });
 
-describe("모든 문항을 다 풀면 결과정보를 보여준다", () => {
+describe("1.모든 문항을 다 풀면 결과정보를 보여준다", () => {
   test("퀴즈를 마치 때까지 소요된 시간이 노출되는지", () => {});
-  test("정답 개수, 오답 개수를 볼 수 있는지", () => {});
-  test("정 오답에 대한 비율을 확인할 수 있는지", () => {});
 });
+// npm test -- --testPathPattern=ResultPage1.test.tsx
