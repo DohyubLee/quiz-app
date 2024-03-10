@@ -1,6 +1,6 @@
 # 프로젝트 정보
 
-구현된 [결과물 URL](https://joyful-kelpie-98aa11.netlify.app).
+구현된 [결과물 URL](https://incandescent-fox-0a563b.netlify.app/).
 
 ## 구현 내용
 
@@ -18,14 +18,18 @@
 - 오답 노트
   - 틀린 문항에 대해서 따로 리뷰할 수 있다.
 
-'request failed with status code 429'
+## TEST 안내 및 특이사항
 
-// npm test -- --testPathPattern=IndexPage.test.tsx
-// npm test -- --testPathPattern=TestPage1.test.tsx
-// npm test -- --testPathPattern=TestPage2.test.tsx
-// npm test -- --testPathPattern=TestPage3.test.tsx
-// npm test -- --testPathPattern=ResultPage1.test.tsx
-// npm test -- --testPathPattern=ResultPage2.test.tsx
-// npm test -- --testPathPattern=ResultPage3.test.tsx
-// npm test -- --testPathPattern=IncorrectAnswerNotePage1.test.tsx
-// npm test -- --testPathPattern=IncorrectAnswerNotePage2.test.tsx
+테스트를 한 번 실행했을 때 각각의 전체 테스트 모듈을 체크하려고 하였으나  
+제공해 주신 api 관련하여 빈번한 <code>'request failed with status code 429'</code> 이슈가 있어  
+부득이하게 각각의 테스트 모듈을 실행해 줘야 하는 상황이라 실행하는 명령어들이라도 정리하여 공유드립니다.
+
+- npm test -- --testPathPattern=IndexPage.test.tsx
+- npm test -- --testPathPattern=TestPage1.test.tsx
+- npm test -- --testPathPattern=TestPage2.test.tsx
+- npm test -- --testPathPattern=TestPage3.test.tsx
+- npm test -- --testPathPattern=ResultPage1.test.tsx
+- npm test -- --testPathPattern=ResultPage2.test.tsx
+- npm test -- --testPathPattern=ResultPage3.test.tsx
+- npm test -- --testPathPattern=IncorrectAnswerNotePage1.test.tsx
+- npm test -- --testPathPattern=IncorrectAnswerNotePage2.test.tsx
