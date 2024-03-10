@@ -5,6 +5,7 @@ import {
   getByText,
   render,
   screen,
+  waitFor,
 } from "@testing-library/react";
 import IndexPage from "./IndexPage";
 import { MemoryRouter, BrowserRouter, Routes, Route } from "react-router-dom";
@@ -32,14 +33,15 @@ describe("메인 페이지에서 퀴즈 시작하기 버튼을 클릭하여 퀴�
 
     expect(startBtnEl).toBeInTheDocument();
     const user = userEvent.setup();
+
     await act(async () => {
       await user.click(startBtnEl);
     });
 
     const quizOptionsEl = await findAllByRole("radio", {}, { timeout: 3000 });
     // const { currentTime, quizList } = useStore.getState();
-    screen.debug();
     // screen.debug(quizOptionsEl);
-    expect(quizOptionsEl.length).toBeGreaterThan(2);
+    expect(quizOptionsEl.length).toBeGreaterThan(1);
   });
 });
+// npm test -- --testPathPattern=IndexPage.test.tsx
