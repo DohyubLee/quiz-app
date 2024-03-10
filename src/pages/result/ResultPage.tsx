@@ -73,6 +73,7 @@ function ResultPage() {
               }}
               type="circle"
               trailColor="#FF4D4F"
+              data-testid="result-progress"
             />
           </Col>
         </Row>
