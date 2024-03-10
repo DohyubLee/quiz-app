@@ -39,8 +39,6 @@ describe("메인 페이지에서 퀴즈 시작하기 버튼을 클릭하여 퀴�
     });
 
     const quizOptionsEl = await findAllByRole("radio", {}, { timeout: 3000 });
-    // const { currentTime, quizList } = useStore.getState();
-    // screen.debug(quizOptionsEl);
     expect(quizOptionsEl.length).toBeGreaterThan(1);
   });
 });

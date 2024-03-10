@@ -81,7 +81,11 @@ function TestPage() {
               <Card
                 key={item.order}
                 rootClassName="quiz-card"
-                title={decodedText}
+                title={
+                  <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 600 }}>
+                    {decodedText}
+                  </h3>
+                }
                 extra={
                   <Button
                     type="primary"
