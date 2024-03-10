@@ -1,6 +1,6 @@
 import React from "react";
 import { act, render, screen } from "@testing-library/react";
-import { MemoryRouter, BrowserRouter, Routes, Route } from "react-router-dom";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 import ResultPage from "./ResultPage";
 import IndexPage from "../IndexPage";
 import TestPage from "../test/TestPage";

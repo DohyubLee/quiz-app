@@ -1,10 +1,9 @@
 import React from "react";
-import { act, getByText, render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import TestPage from "./TestPage";
 import IndexPage from "../IndexPage";
 import userEvent from "@testing-library/user-event";
-import useStore from "../../stores/store";
 
 describe("2.사용자가 문제 풀이를 진행", () => {
   let renderUtils: ReturnType<typeof render>;

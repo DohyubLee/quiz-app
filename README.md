@@ -19,3 +19,13 @@
   - 틀린 문항에 대해서 따로 리뷰할 수 있다.
 
 'request failed with status code 429'
+
+// npm test -- --testPathPattern=IndexPage.test.tsx
+// npm test -- --testPathPattern=TestPage1.test.tsx
+// npm test -- --testPathPattern=TestPage2.test.tsx
+// npm test -- --testPathPattern=TestPage3.test.tsx
+// npm test -- --testPathPattern=ResultPage1.test.tsx
+// npm test -- --testPathPattern=ResultPage2.test.tsx
+// npm test -- --testPathPattern=ResultPage3.test.tsx
+// npm test -- --testPathPattern=IncorrectAnswerNotePage1.test.tsx
+// npm test -- --testPathPattern=IncorrectAnswerNotePage2.test.tsx

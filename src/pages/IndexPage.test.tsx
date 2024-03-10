@@ -1,15 +1,7 @@
 import React from "react";
-import {
-  act,
-  findAllByRole,
-  getByText,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 import IndexPage from "./IndexPage";
-import { MemoryRouter, BrowserRouter, Routes, Route } from "react-router-dom";
-import useStore from "../stores/store";
+import { MemoryRouter, Routes, Route } from "react-router-dom";
 import TestPage from "./test/TestPage";
 import userEvent from "@testing-library/user-event";
 

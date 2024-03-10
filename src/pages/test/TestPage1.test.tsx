@@ -1,10 +1,9 @@
 import React from "react";
-import { act, getByText, render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import TestPage from "./TestPage";
 import IndexPage from "../IndexPage";
 import userEvent from "@testing-library/user-event";
-import useStore from "../../stores/store";
 
 describe("1.사용자가 문제 풀이를 진행", () => {
   let renderUtils: ReturnType<typeof render>;
@@ -26,7 +25,6 @@ describe("1.사용자가 문제 풀이를 진행", () => {
     await act(async () => {
       await user.click(startBtnEl);
     });
-    const { currentTime, quizList } = useStore.getState();
     const quizOptionsEl = await findAllByRole("radio", {}, { timeout: 3000 });
     await act(async () => {
       await user.click(quizOptionsEl[0]);
