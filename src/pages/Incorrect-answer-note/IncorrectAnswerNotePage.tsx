@@ -43,6 +43,7 @@ function IncorrectAnswerNotePage() {
           return (
             <Card
               rootClassName="quiz-card"
+              data-testid="incorrect-card"
               title={
                 <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 600 }}>
                   {decodedText}
