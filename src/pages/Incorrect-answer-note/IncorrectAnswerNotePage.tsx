@@ -43,7 +43,11 @@ function IncorrectAnswerNotePage() {
           return (
             <Card
               rootClassName="quiz-card"
-              title={decodedText}
+              title={
+                <h3 style={{ margin: 0, fontSize: "16px", fontWeight: 600 }}>
+                  {decodedText}
+                </h3>
+              }
               key={item.order}
             >
               <Radio.Group value={item.selectedAnswer} disabled>
